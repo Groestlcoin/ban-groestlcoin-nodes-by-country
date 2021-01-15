@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ban.sh
-# shell script to automatically identify and ban bitcoin clients by country
+# shell script to automatically identify and ban groestlcoin clients by country
 
 # You need to install jq in order to use this script
 command -v jq >/dev/null 2>&1 || { echo >&2 "Please install \"jq\" first. Aborting."; exit 1; }
@@ -10,8 +10,8 @@ command -v jq >/dev/null 2>&1 || { echo >&2 "Please install \"jq\" first. Aborti
 command -v geoiplookup >/dev/null 2>&1 || { echo >&2 "Please install \"geopiplookup\" first. Aborting."; exit 1; }
 
 # Adjust CLIENT variable so it calls bitcoin-cli with the right parameters
-# Non standart installations need to add -conf=/PATHtoYOUR/bitcoin.conf -datadir=/PATH/to/YOUR/Datadir/
-CLIENT=/usr/local/bin/bitcoin-cli
+# Non standard installations need to add -conf=/PATHtoYOUR/groestlcoin.conf -datadir=/PATH/to/YOUR/Datadir/
+CLIENT=/usr/local/bin/groestlcoin-cli
 
 # Ban Time in seconds, 36000 = 10h, 2592000 = 30 days
 BAN_TIME="36000"
